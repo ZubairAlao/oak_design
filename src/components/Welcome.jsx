@@ -1,6 +1,6 @@
 import React from 'react'
-import WelcomeImg1 from "@/assets/images/Welcome1.jpg"
-import WelcomeImg2 from "@/assets/images/Welcome2.jpg"
+import WelcomeImg1 from "@/assets/images/welcome1.jpg"
+import WelcomeImg2 from "@/assets/images/welcome2.jpg"
 import headerLine from "@/assets/images/header-line.svg"
 
 const Welcome = () => {
