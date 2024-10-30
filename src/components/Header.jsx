@@ -55,7 +55,7 @@ const Header = () => {
                                 >
                                     <NavLink
                                         className={({ isActive }) =>
-                                            isActive ? 'md-link md-link-active' : 'md-link'
+                                            isActive ? 'md-link md-link-active ' : 'md-link'
                                         }
                                         to={link.link}
                                     >
