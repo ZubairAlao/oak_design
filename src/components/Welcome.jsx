@@ -19,7 +19,7 @@ const Welcome = () => {
                     <p className='font-sizes font-normal'>
                         When we say we are your partner in building a more robust future, we mean it. Through years of experience and sectoral expertise, we've become one of the few industry leaders in the Real Estate, Venture Capital, and Digital Banking sectors.
                     </p>
-                    <img src={WelcomeImg1} alt="welcome image" className='md:min-h-[246px] lg:min-h-[390px]'  />
+                    <img src={WelcomeImg1} alt="welcome image" className='w-full'  />
                 </div>
             </div>
 

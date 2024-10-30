@@ -1,5 +1,4 @@
 import React from 'react'
-import HeroGrid from "@/assets/images/hero-grid.svg"
 import FooterLogo from "@/assets/images/footer-logo.png"
 import FacebookIcon from "@/assets/images/facebook.svg"
 import TwitterIcon from "@/assets/images/twitter.svg"
@@ -9,7 +8,9 @@ import { Link } from 'react-router-dom'
 import LargeHeroGrid from "@/assets/images/large-hero-grid.svg"
 import { goldenContactInfo } from '../constants'
 
+
 const Footer = () => {
+
   return (
     <footer className='relative bg-[#2D2D2D] pb-16'>
         <div className="">
@@ -21,14 +22,14 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative'>
-            <div className='max-w-[1236px] w-[86%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
+            <div className='max-w-[1236px] w-[90%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
               <div className='space-y-4'>
                 <img src={FooterLogo} alt="footer logo" className='w-[89px] md:w-[132px] h-fit'/>
-                  <div className='lg:flex items-center gap-5 justify-center md:hidden'>
-                    <img src={InstagramIcon} alt="" />
-                    <img src={TwitterIcon} alt="" />
-                    <img src={LinkedInIcon} alt="" />
-                    <img src={FacebookIcon} alt="" />
+                  <div className='lg:flex items-center gap-5 justify-center hidden'>
+                    <img src={InstagramIcon} alt="instagram icon" />
+                    <img src={TwitterIcon} alt="twitter icon" />
+                    <img src={LinkedInIcon} alt="linkedin icon" />
+                    <img src={FacebookIcon} alt="facebook icon" />
                   </div>
               </div>
               
@@ -40,30 +41,30 @@ const Footer = () => {
               </div>
 
               <div className='flex md:hidden gap-5 justify-center flex-wrap md:flex-nowrap md:flex-col font-semibold'>
-                <Link to="">HOME</Link>
-                <Link to="">WHO WE ARE</Link>
-                <Link to="">WHAT WE DO</Link>
-                <Link to="">OAK HOME</Link>
-                <Link to="">THE OAK CAPITAL</Link>
+                <button>HOME</button>
+                <button>WHO WE ARE</button>
+                <button>WHAT WE DO</button>
+                <button>OAK HOME</button>
+                <button>THE OAK CAPITAL</button>
               </div>
 
               
-                <div className='hidden md:flex flex-col gap-6 text-base font-semibold'>
-                  <Link to="">HOME</Link>
-                  <Link to="">WHO WE ARE</Link>
-                  <Link to="">WHAT WE DO</Link>
-                </div>
-                <div className='hidden md:flex gap-6 flex-col text-base font-semibold'>
-                  <Link to="">OAK HOME</Link>
-                  <Link to="">THE OAK CAPITAL</Link>
-                </div>
+              <div className='hidden md:flex flex-col gap-6 text-base font-semibold'>
+                <Link to="">HOME</Link>
+                <Link to="">WHO WE ARE</Link>
+                <Link to="">WHAT WE DO</Link>
+              </div>
+              <div className='hidden md:flex gap-6 flex-col text-base font-semibold'>
+                <Link to="">OAK HOME</Link>
+                <Link to="">THE OAK CAPITAL</Link>
+              </div>
 
 
               <div className='flex items-center justify-center md:items-start flex-col gap-6'>
                 <h3 className='font-semibold md:text-xl'>CONTACT US</h3>
                 <div className='space-y-6'>
                   {goldenContactInfo.map((info) => (
-                      <div className='flex items-center justify-center flex-col md:flex-row md:justify-start gap-2'>
+                      <div key={info.label} className='flex items-center justify-center flex-col md:flex-row md:justify-start gap-2'>
                           <img src={info.image} alt={info.label} />
                           <p>{info.label}</p>
                       </div>

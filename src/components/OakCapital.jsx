@@ -7,7 +7,7 @@ import { OakCapitalList } from '../constants'
 const OakCapital = () => {
   return (
     <section className='py-12 md:pt-[128px] md:pb-[93px]'>
-        <div className="container space-y-20">
+        <div className="container md:space-y-20 space-y-12">
             <div className='md:flex gap-6'>
                 <div className='space-y-6 md:w-[42%] lg:w-full lg:flex justify-between lg:flex-row-reverse'>
                     <div className='lg:flex flex-col lg:w-[70%] lg:max-w-[763px] lg:ml-8'>
@@ -28,9 +28,14 @@ const OakCapital = () => {
                         <span className='block'>Our strategy is to be positioned as the go-to investor for founders with groundbreaking solutions to problems in Africa.</span>
                     </p>
 
-                    <div className='grid grid-cols-4 md:grid-cols-2 gap-2 justify-start items-center md:max-w-[350px] lg:max-w-[396px] lg:h-[196px]'>
+                    <div className='grid grid-cols-4 md:grid-cols-2 gap-2 md:gap-4 justify-start items-center md:max-w-[350px] lg:max-w-[396px] lg:h-[196px]'>
                         {OakCapitalList.map((list, index) => (
-                            <div key={index} className='flex items-center justify-center gap-2 md:gap-4 border-[0.5px] border-[#9F8449] rounded-sm p-1.5 md:p-2 w-full lg:max-w-[182px] min-h-[82px]'>
+                            <div 
+                                key={index} 
+                                className='flex items-center justify-center gap-2 md:gap-4 
+                                    border-[0.5px] border-[#9F8449] rounded-sm 
+                                    p-1.5 md:p-2 w-full lg:max-w-[182px] min-h-fit'
+                                >
                                 <div className='w-[19px] h-[19px] md:w-[40px] md:h-[40px] bg-[#333333] rounded-full flex items-center justify-center'>
                                     <img src={list.image} alt={list.label} className='w-[10px] h-[10px] md:w-[21px] md:h-[21px]' />
                                 </div>

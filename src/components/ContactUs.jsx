@@ -19,7 +19,7 @@ const ContactUs = () => {
 
                 <div className='space-y-6'>
                     {contactInfo.map((info) => (
-                        <div className='flex justify-start items-center gap-4'>
+                        <div key={info.label} className='flex justify-start items-center gap-4'>
                             <img src={info.image} alt={info.label} />
                             <p>{info.label}</p>
                         </div>
@@ -32,27 +32,27 @@ const ContactUs = () => {
                     <form action="" className='space-y-4 text-[10px] contact-form'>
                         <div>
                             <label htmlFor="">FULL NAME</label>
-                            <input type="text" class="contact-input" placeholder="John Doe" />
+                            <input type="text" className="contact-input" placeholder="John Doe" />
                         </div>
 
                         <div>
                             <label htmlFor="">EMAIL ADDRESS</label>
-                            <input type="email" class="contact-input" placeholder="Johndoe@email.com" />
+                            <input type="email" className="contact-input" placeholder="Johndoe@email.com" />
                         </div>
 
                         <div>
                             <label htmlFor="">PHONE NUMBER</label>
-                            <input type="phone" class="contact-input" placeholder="08012344321" />
+                            <input type="phone" className="contact-input" placeholder="08012344321" />
                         </div>
 
                         <div>
                             <label htmlFor="">HOW DID YOU HEAR ABOUT US</label>
-                            <input type="text" class="contact-input"/>
+                            <input type="text" className="contact-input"/>
                         </div>
 
                         <div>
                             <label htmlFor="">HOW DID YOU HEAR ABOUT US</label>
-                            <textarea class="contact-input h-[120px] lg:h-[200px]" placeholder="Type in your message"> </textarea>
+                            <textarea className="contact-input h-[120px] lg:h-[200px]" placeholder="Type in your message" /> 
                         </div>
 
                         <Button  text="Send Message" />

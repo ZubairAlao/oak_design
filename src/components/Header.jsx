@@ -85,7 +85,7 @@ const Header = () => {
                 aria-label="Mobile Navigation"
                 className={`md:hidden fixed top-[89px] right-0 left-0 transition-all duration-500 ease-in-out transform ${
                     toggle ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-                } bg-[#0C0C0D] text-center w-full koho-regular py-11 z-20`}
+                } bg-[#0C0C0D] text-center w-full koho-regular py-11 z-30`}
             >
                 <ul className="space-y-9 w-[32%] max-w-[106px] mx-auto text-sm">
                     {navHeaders.map((link, index) => (
