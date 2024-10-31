@@ -3,6 +3,7 @@ import { aboutPicFirstRow, aboutPicSecondRow } from '../constants';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import headerLine from "@/assets/images/header-line.svg";
+import HomeOakGrid from "@/assets/images/homeoak-grid.png";
 import { motion } from 'framer-motion';
 
 const AboutUs = () => {
@@ -74,12 +75,20 @@ const AboutUs = () => {
                 </motion.div>
 
                 <motion.div
-                    className='space-y-8'
+                    className='space-y-8 relative'
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <Splide className='flex items-center justify-center md:mr-8 lg:mr-0' options={options}>
+                    <div className="absolute top-0 z-10 w-full h-full rotate-180"
+                    style={{ 
+                        backgroundImage: `url(${HomeOakGrid})`,
+                        backgroundPosition: 'bottom', 
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat' }}
+                    >
+                    </div>
+                    <Splide className='flex items-center justify-center md:mr-8 lg:mr-0 relative z-20' options={options}>
                         {aboutPicFirstRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
                                 <motion.img 
@@ -95,7 +104,7 @@ const AboutUs = () => {
                         ))}
                     </Splide>
 
-                    <Splide className='flex items-center justify-center md:ml-8 lg:ml-0' options={optionsTwo}>
+                    <Splide className='flex items-center justify-center md:ml-8 lg:ml-0 relative z-20' options={optionsTwo}>
                         {aboutPicSecondRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
                                 <motion.img 

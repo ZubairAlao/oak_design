@@ -41,8 +41,8 @@ const Header = () => {
 
     return (
         <header className='flex justify-center items-center'>
-            <div className="fixed top-0 z-50 w-full bg-[#333333]">
-                <div className="h-[89px] md:h-[58px] lg:h-[94px] bg-[#4B4B4B] md:mt-[1.9rem] flex justify-between items-center px-4 container ">
+            <div className="fixed top-0 z-50 w-full bg-[#333333] md:px-8 lg:px-0">
+                <div className="h-[89px] md:h-[58px] lg:h-[94px] bg-[#4B4B4B] md:mt-[1.8rem] flex justify-between items-center px-4 md:px-8 container">
                     <Link 
                         to="home"
                         smooth={true}
@@ -139,8 +139,8 @@ const Header = () => {
                         to="contactUs"
                         smooth={true}
                         duration={500}
-                        spy={true}
                         offset={-104}
+                        onClick={handleToggleButton}
                     >
                         CONTACT US
                     </Link>
