@@ -7,21 +7,25 @@ import InstagramIcon from "@/assets/images/instagram.svg"
 import { Link } from 'react-router-dom'
 import LargeHeroGrid from "@/assets/images/large-hero-grid.svg"
 import { goldenContactInfo } from '../constants'
+import HeroBg from "@/assets/images/hero-bg.png"
 
 
 const Footer = () => {
 
   return (
-    <footer className='relative bg-[#2D2D2D] pb-16'>
+    <footer className='relative bg-[#2F2F2F] pb-16 pt-48'>
         <div className="">
-          <div className='h-[271px]'>
-            <div className='bg-bottom absolute bg-gradient-to-b from-[#0C0C0D] to-[#2D2D2D]'>
-              <img src={LargeHeroGrid} alt="background" className=' w-screen md:h-[221px] lg:md:h-[310px] rotate-180' />
-              <div className='absolute top-0 left-0 h-[86px] -mt-10 w-full bg-gradient-to-b from-transparent via-[#0C0C0D] to-[#0C0C0D]'></div>
-            </div>
+          <div 
+            className="absolute rotate-180 z-10 top-0 min-h-[520px] bg-cover bg-center w-full"
+            style={{ 
+              backgroundImage: `url(${HeroBg})`, 
+              backgroundPosition: 'center', 
+              backgroundSize: '100% 100%', 
+              backgroundRepeat: 'no-repeat' }}
+          >
           </div>
 
-          <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative'>
+          <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20 '>
             <div className='max-w-[1236px] w-[90%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
               <div className='space-y-4'>
                 <img src={FooterLogo} alt="footer logo" className='w-[89px] md:w-[132px] h-fit'/>
@@ -80,7 +84,7 @@ const Footer = () => {
               </div>
           </div>
         </div>
-        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container text-center'>© The Oak Holdings 2024. All Rights Reserved</p>
+        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container font-sizes text-center z-20 relative'>© The Oak Holdings 2024. All Rights Reserved</p>
     </footer>
   )
 }

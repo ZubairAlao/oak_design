@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import HeroBg from "@/assets/images/hero-bg.png"
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -11,12 +12,36 @@ const Hero = () => {
       ></div>
       
         <div className='space-y-6 md:space-y-9 text-center container relative z-20 w-[100%] max-w-[25rem] md:max-w-[38rem] lg:max-w-[970px]'>
-            <div>
-                <h1 className='cormorant-garamond  font-bold text-4xl md:text-6xl lg:text-8xl mb-2'>THE OAK</h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="cormorant-garamond font-bold text-4xl md:text-6xl lg:text-8xl mb-2"
+            >
+              THE OAK
+            </motion.h1>
 
-                <p className='text-base md:text-2xl koho-regular'>The Oak Holdings is a consortium of companies specialising in Venture Capital, asset management, Real Estate and financial services.</p>
-            </div>
-            <Button text="GET MORE INFO"/>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="text-base md:text-2xl lg:text-3xl koho-regular"
+            >
+              The Oak Holdings is a consortium of companies specialising in Venture Capital, asset management, Real Estate and financial services.
+            </motion.p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+          >
+            <Button text="GET MORE INFO" />
+          </motion.div>
         </div>
 
         {/* <div className='absolute bottom-0 h-[177px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-20 w-full'>
