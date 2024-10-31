@@ -13,10 +13,10 @@ import HeroBg from "@/assets/images/hero-bg.png"
 const Footer = () => {
 
   return (
-    <footer className='relative  pb-16 pt-48'>
+    <footer className='relative pb-16 pt-20'>
         <div className="">
           <div 
-            className="absolute z-10 -top-32 h-full bg-cover bg-center w-full"
+            className="absolute z-10 -top-32 h-[400px] bg-cover bg-center w-full"
             style={{ 
               backgroundImage: `url(${FooterGrid})`, 
               backgroundPosition: 'center', 
@@ -24,10 +24,10 @@ const Footer = () => {
               backgroundRepeat: 'no-repeat' }}
           >
           </div>
-          <div className='absolute -top-12  h-[57px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-30 w-full'>
+          <div className='absolute -top-12  h-[50px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-30 w-full'>
           </div>
 
-          <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20 '>
+          <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20'>
             <div className='max-w-[1236px] w-[90%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
               <div className='space-y-4'>
                 <Link
