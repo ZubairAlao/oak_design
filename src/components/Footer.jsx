@@ -55,7 +55,7 @@ const Footer = () => {
               
               <div className='hidden md:flex flex-col gap-6 text-base font-semibold'>
                 <Link to="">HOME</Link>
-                <Link to="">WHO WE ARE</Link>
+                <Link to="#welcome">WHO WE ARE</Link>
                 <Link to="">WHAT WE DO</Link>
               </div>
               <div className='hidden md:flex gap-6 flex-col text-base font-semibold'>

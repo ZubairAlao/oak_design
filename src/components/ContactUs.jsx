@@ -3,11 +3,18 @@ import HeaderLine from "@/assets/images/header-line.svg"
 import { contactInfo } from '../constants'
 import Button from './Button'
 import Map from './Map'
+import { motion } from 'framer-motion'
 
 const ContactUs = () => {
   return (
     <section className='pb-[93px]'>
-        <div className='container lg:flex items-center lg:items-start gap-12'>
+        <motion.div 
+            className='container lg:flex items-center lg:items-start gap-12'
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }} 
+        >
             <div className='lg:space-y-12 space-y-8'>
                 <div className=''>
                     <h3 className='text-base cormorant-garamond font-bold'>
@@ -31,38 +38,38 @@ const ContactUs = () => {
 
                     <form action="" className='space-y-4 text-[10px] contact-form'>
                         <div>
-                            <label htmlFor="">FULL NAME</label>
-                            <input type="text" className="contact-input" placeholder="John Doe" />
+                            <label htmlFor="fullName">FULL NAME</label>
+                            <input type="text" id="fullName" className="contact-input" placeholder="John Doe" />
                         </div>
 
                         <div>
-                            <label htmlFor="">EMAIL ADDRESS</label>
-                            <input type="email" className="contact-input" placeholder="Johndoe@email.com" />
+                            <label htmlFor="email">EMAIL ADDRESS</label>
+                            <input type="email" id="email" className="contact-input" placeholder="Johndoe@email.com" />
                         </div>
 
                         <div>
-                            <label htmlFor="">PHONE NUMBER</label>
-                            <input type="phone" className="contact-input" placeholder="08012344321" />
+                            <label htmlFor="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" className="contact-input" placeholder="08012344321" />
                         </div>
 
                         <div>
-                            <label htmlFor="">HOW DID YOU HEAR ABOUT US</label>
-                            <input type="text" className="contact-input"/>
+                            <label htmlFor="referral">HOW DID YOU HEAR ABOUT US</label>
+                            <input type="text" id="referral" className="contact-input" placeholder="Referral Source" />
                         </div>
 
                         <div>
-                            <label htmlFor="">HOW DID YOU HEAR ABOUT US</label>
-                            <textarea className="contact-input h-[120px] lg:h-[200px]" placeholder="Type in your message" /> 
+                            <label htmlFor="message">MESSAGE</label>
+                            <textarea id="message" className="contact-input min-h-[120px] lg:min-h-[200px]" placeholder="Type in your message" /> 
                         </div>
 
-                        <Button  text="Send Message" />
+                        <Button text="Send Message" />
                     </form>
 
                 </div>
             </div>
 
             <Map/>
-        </div>
+        </motion.div>
     </section>
   )
 }

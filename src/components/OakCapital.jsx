@@ -39,7 +39,7 @@ const OakCapital = () => {
               className='grid grid-cols-4 md:grid-cols-2 gap-2 md:gap-4 justify-start items-center 
                           md:max-w-[350px] lg:max-w-[396px] lg:h-fit lg:justify-center'>
               {OakCapitalList.map((list, index) => (
-                <motion.div // Wrap with motion.div for animation
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
