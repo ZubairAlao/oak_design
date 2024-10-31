@@ -25,15 +25,15 @@ import GoldenEmailIcon from "@/assets/images/golden-email.svg"
 export const navHeaders = [
     {
         label: "HOME",
-        link: "/",
+        link: "home",
     },
     {
         label: "WHO WE ARE",
-        link: "/about",
+        link: "oakHolding",
     },
     {
         label: "WHAT WE DO",
-        link: "/services",
+        link: "oakHome",
     }
 ]
 

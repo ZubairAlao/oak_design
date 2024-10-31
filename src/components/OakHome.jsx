@@ -18,6 +18,31 @@ const AboutUs = () => {
         arrows: false,
         pagination: false,
         drag: 'free',
+        autoplay: true,
+        interval: 3000,
+        breakpoints: {
+            1024: { perPage: 4, gap: '0rem' },
+            820: { perPage: 3, gap: '0rem' },
+            576: { perPage: 2, gap: '0rem' },
+        },
+    };
+
+    const optionsTwo = {
+        type: 'loop',
+        gap: '0rem',
+        resetProgress: false,
+        width: "100%",
+        rewind: true,
+        perPage: 4,
+        perMove: 1,
+        rewindSpeed: 3000,
+        arrows: false,
+        pagination: false,
+        drag: 'free',
+        autoplay: true,
+        interval: 3000,
+        delay: 1500,
+        direction: 'rtl',
         breakpoints: {
             1024: { perPage: 4, gap: '0rem' },
             820: { perPage: 3, gap: '0rem' },
@@ -64,12 +89,13 @@ const AboutUs = () => {
                                     initial={{ scale: 0.9 }}
                                     whileHover={{ scale: 1 }}
                                     transition={{ duration: 0.5 }}
+                                    loading="lazy"
                                 />
                             </SplideSlide>
                         ))}
                     </Splide>
 
-                    <Splide className='flex items-center justify-center md:ml-8 lg:ml-0' options={options}>
+                    <Splide className='flex items-center justify-center md:ml-8 lg:ml-0' options={optionsTwo}>
                         {aboutPicSecondRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
                                 <motion.img 
@@ -79,6 +105,7 @@ const AboutUs = () => {
                                     initial={{ scale: 0.9 }}
                                     whileHover={{ scale: 1 }}
                                     transition={{ duration: 0.5 }}
+                                    loading="lazy"
                                 />
                             </SplideSlide>
                         ))}

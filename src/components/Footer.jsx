@@ -4,7 +4,7 @@ import FacebookIcon from "@/assets/images/facebook.svg"
 import TwitterIcon from "@/assets/images/twitter.svg"
 import LinkedInIcon from "@/assets/images/linkedin.svg"
 import InstagramIcon from "@/assets/images/instagram.svg"
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import LargeHeroGrid from "@/assets/images/large-hero-grid.svg"
 import { goldenContactInfo } from '../constants'
 import HeroBg from "@/assets/images/hero-bg.png"
@@ -28,39 +28,142 @@ const Footer = () => {
           <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20 '>
             <div className='max-w-[1236px] w-[90%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
               <div className='space-y-4'>
-                <img src={FooterLogo} alt="footer logo" className='w-[89px] md:w-[132px] h-fit'/>
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                >
+                  <img src={FooterLogo} alt="footer logo" className='w-[89px] md:w-[132px] h-fit cursor-pointer'/>
+                </Link>
                   <div className='lg:flex items-center gap-5 justify-center hidden'>
-                    <img src={InstagramIcon} alt="instagram icon" />
-                    <img src={TwitterIcon} alt="twitter icon" />
-                    <img src={LinkedInIcon} alt="linkedin icon" />
-                    <img src={FacebookIcon} alt="facebook icon" />
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                      <img src={InstagramIcon} alt="Instagram icon" className="social-icon cursor-pointer" />
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                      <img src={TwitterIcon} alt="Twitter icon" className="social-icon cursor-pointer" />
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                      <img src={LinkedInIcon} alt="LinkedIn icon" className="social-icon cursor-pointer" />
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                      <img src={FacebookIcon} alt="Facebook icon" className="social-icon cursor-pointer" />
+                    </a>
                   </div>
               </div>
               
               <div className='flex items-center gap-5 justify-center md:hidden'>
-                <img src={InstagramIcon} alt="" />
-                <img src={TwitterIcon} alt="" />
-                <img src={LinkedInIcon} alt="" />
-                <img src={FacebookIcon} alt="" />
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <img src={InstagramIcon} alt="Instagram icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                  <img src={TwitterIcon} alt="Twitter icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <img src={LinkedInIcon} alt="LinkedIn icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <img src={FacebookIcon} alt="Facebook icon" className="social-icon cursor-pointer" />
+                </a>
               </div>
 
               <div className='flex md:hidden gap-5 justify-center flex-wrap md:flex-nowrap md:flex-col font-semibold'>
-                <button>HOME</button>
-                <button>WHO WE ARE</button>
-                <button>WHAT WE DO</button>
-                <button>OAK HOME</button>
-                <button>THE OAK CAPITAL</button>
+              <Link to="home"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >
+                  HOME
+                </Link>
+
+                <Link
+                  to="oakHolding"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >WHO WE ARE</Link>
+
+                <Link
+                to="oakHome"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-104}
+                className='cursor-pointer footer-link'
+                >WHAT WE DO</Link>
+                <Link
+                  to="oakHome"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >OAK HOME</Link>
+
+                <Link
+                  to="oakCapital"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >THE OAK CAPITAL</Link>
               </div>
 
               
               <div className='hidden md:flex flex-col gap-6 text-base font-semibold'>
-                <Link to="">HOME</Link>
-                <Link to="#welcome">WHO WE ARE</Link>
-                <Link to="">WHAT WE DO</Link>
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >
+                  HOME
+                </Link>
+
+                <Link
+                  to="oakHolding"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >WHO WE ARE</Link>
+
+                <Link
+                to="oakHome"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-104}
+                className='cursor-pointer footer-link'
+                >WHAT WE DO</Link>
+
               </div>
               <div className='hidden md:flex gap-6 flex-col text-base font-semibold'>
-                <Link to="">OAK HOME</Link>
-                <Link to="">THE OAK CAPITAL</Link>
+                
+                <Link
+                  to="oakHome"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >OAK HOME</Link>
+
+                <Link
+                  to="oakCapital"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-104}
+                  className='cursor-pointer footer-link'
+                >THE OAK CAPITAL</Link>
               </div>
 
 
@@ -77,10 +180,10 @@ const Footer = () => {
               </div>
             </div>
             <div className='hidden items-center gap-5 justify-center md:flex lg:hidden'>
-                <img src={InstagramIcon} alt="" className='w-5 h-fit'/>
-                <img src={TwitterIcon} alt="" className='w-5 h-fit'/>
-                <img src={LinkedInIcon} alt="" className='w-5 h-fit'/>
-                <img src={FacebookIcon} alt="" className='w-5 h-fit'/>
+                <img src={InstagramIcon} alt="Instagram Icon" className='w-5 h-fit social-icon cursor-pointer'/>
+                <img src={TwitterIcon} alt="Twitter icon" className='w-5 h-fit social-icon cursor-pointer'/>
+                <img src={LinkedInIcon} alt="LinkedIn Icon" className='w-5 h-fit social-icon cursor-pointer'/>
+                <img src={FacebookIcon} alt="Facebook Icon" className='w-5 h-fit social-icon cursor-pointer'/>
               </div>
           </div>
         </div>

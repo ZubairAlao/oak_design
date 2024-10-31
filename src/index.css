@@ -106,17 +106,16 @@ body {
 /* desktop */
 .md-link:hover {
   font-weight: bold;
-  
 }
 
 /* Active state with ::after pseudo-element */
-.md-link-active {
+a.active {
   font-weight: bold;
   width: 100%;
   position: relative;
 }
 
-.md-link-active::after {
+a.active::after {
   content: '';
   display: block;
   background-image: url('/header-line.png');
@@ -158,4 +157,16 @@ body {
 .contact-form label {
   display: block;
   margin-bottom: 6px;
+}
+
+/* footer */
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(85%);
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
 }

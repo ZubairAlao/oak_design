@@ -36,7 +36,7 @@ const OakCapital = () => {
             </p>
 
             <div 
-              className='grid grid-cols-4 md:grid-cols-2 gap-2 md:gap-4 justify-start items-center 
+              className='grid grid-cols-2 gap-2 md:gap-4 justify-start items-center 
                           md:max-w-[350px] lg:max-w-[396px] lg:h-fit lg:justify-center'>
               {OakCapitalList.map((list, index) => (
                 <motion.div
@@ -44,15 +44,15 @@ const OakCapital = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className='flex items-center justify-center gap-2 md:gap-4 
-                              border-[0.5px] border-[#9F8449] rounded-sm 
-                              p-1.5 md:p-2 w-full lg:max-w-[162px] min-h-fit
+                  className='flex items-center justify-center gap-2 md:gap-4
+                              border-[0.5px] border-[#9F8449] rounded-sm
+                              p-1.5 md:p-2 w-full lg:max-w-[200px] md:min-h-fit
                               hover:border-opacity-50 hover:shadow-lg cursor-pointer'
                 >
-                  <div className='w-[19px] h-[19px] md:w-[40px] md:h-[40px] bg-[#333333] rounded-full flex items-center justify-center'>
-                    <img src={list.image} alt={list.label} className='w-[10px] h-[10px] md:w-[21px] md:h-[21px]' />
+                  <div className='min-w-[40px] h-[40px] bg-[#333333] rounded-full flex items-center justify-center'>
+                    <img src={list.image} alt={list.label} className='w-[21px] h-[21px] flex  justify-center items-center' />
                   </div>
-                  <p className='w-[80%] text-[8px] md:text-[12px] leading-tight m-0'>{list.label}</p>
+                  <p className='w-[80%]  md:text-[12px] leading-tight m-0'>{list.label}</p>
                 </motion.div>
               ))}
             </div>

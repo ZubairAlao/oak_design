@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import HeaderLogo from "@/assets/images/header-logo.png";
 import Menubar from "@/assets/images/menubar.svg";
 import CancelClose from "@/assets/images/close.svg";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { navHeaders } from '../constants';
+
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const Header = () => {
@@ -40,9 +41,14 @@ const Header = () => {
 
     return (
         <header className='flex justify-center items-center'>
-            <div className="fixed top-0 z-50 w-full md:px-4 bg-[#333333]">
-                <div className="h-[89px] md:h-[58px] lg:h-[94px] bg-[#4B4B4B] md:my-4 flex justify-between items-center px-4">
-                    <Link to="/" aria-label="Home" className="relative z-30">
+            <div className="fixed top-0 z-50 w-full bg-[#333333]">
+                <div className="h-[89px] md:h-[58px] lg:h-[94px] bg-[#4B4B4B] md:mt-[1.9rem] flex justify-between items-center px-4 container ">
+                    <Link 
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        className='cursor-pointer relative z-30'
+                        aria-label="Home">
                         <img src={HeaderLogo} alt="Website Logo" className="w-[66px] md:w-[50px] lg:w-[82px] h-fit" />
                     </Link>
 
@@ -53,28 +59,35 @@ const Header = () => {
                                 <li className='text-base'
                                 key={link.label}
                                 >
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? 'md-link md-link-active ' : 'md-link'
-                                        }
+                                    <Link
+                                        className="cursor-pointer md-link"
                                         to={link.link}
+                                        smooth={true}
+                                        duration={500}
+                                        spy={true}
+                                        offset={-104}
+                                        activeClass="active"
                                     >
                                         {link.label}
-                                    </NavLink>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </nav>
 
-                    <button 
+                    <Link 
                         className="border border-[#AF885A] text-[#AF885A] px-3 py-2 lg:px-12 lg:py-4 text-[1rem] hidden md:block
                         transition-all duration-300 ease-in-out
                         bg-transparent hover:bg-[#AF885A] hover:text-[#F5F5F5]
                         hover:shadow-lg hover:scale-100
-                        active:translate-y-[2px] active:shadow-none"
+                        active:translate-y-[2px] active:shadow-none cursor-pointer"
+                        to="contactUs"
+                        smooth={true}
+                        duration={500}
+                        offset={-104}
                     >
                         CONTACT US
-                    </button>
+                    </Link>
 
                     <button
                         aria-label="Toggle navigation menu"
@@ -100,28 +113,37 @@ const Header = () => {
                           className={`pb-3 w-full ${toggle ? 'animate-fadeInUp' : ''}`}
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-link nav-link-active' : 'nav-link'
-                                }
+                            <Link
+                                className="nav-link cursor-pointer"
                                 to={link.link}
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                offset={-104}
+                                activeClass="active"
                                 onClick={handleToggleButton}
                             >
                                 {link.label}
-                            </NavLink>
+                            </Link>
                         </li>
                     ))}
                 </ul>
                 <div className={`mt-[2.25rem] ${toggle ? 'animate-fadeInUp' : ''}`}
-                        style={{ animationDelay: `${navHeaders.length * 0.1}s` }}>
-                    <button className="border border-[#C5A675] text-[#C5A675] px-7 py-2 text-[0.56rem]
+                        style={{ animationDelay: `${navHeaders.length * 0.1}s` }}
+                        >
+                    <Link className="border border-[#C5A675] text-[#C5A675] px-7 py-2 text-[0.56rem]
                         transition-all duration-300 ease-in-out
                         bg-transparent hover:bg-[#AF885A] hover:text-[#F5F5F5]
                         hover:shadow-lg hover:scale-100
-                        active:translate-y-[2px] active:shadow-none"
+                        active:translate-y-[2px] active:shadow-none cursor-pointer"
+                        to="contactUs"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        offset={-104}
                     >
                         CONTACT US
-                    </button>
+                    </Link>
                 </div>
             </nav>
         </header>

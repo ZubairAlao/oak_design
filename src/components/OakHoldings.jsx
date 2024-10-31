@@ -38,7 +38,7 @@ const Welcome = () => {
         </motion.div>
 
         <motion.div
-          className="md:w-[39%] md:max-w-[327px] lg:max-w-[552px]"
+          className="md:w-[39%] md:max-w-[327px] lg:max-w-[586px]"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -46,7 +46,7 @@ const Welcome = () => {
           <img 
             src={WelcomeImg2} 
             alt="welcome image 2" 
-            className="w-full md:min-h-[367px] lg:min-h-[542px] object-cover transition-all duration-300 hover:border-2 border-[#AF885A]"
+            className="w-full lg:min-h-[467px] md:min-h-[367px] object-cover transition-all duration-300 hover:border-2 border-[#AF885A]"
           />
           <div className="font-semibold font-sizes md:space-y-0.5 mt-4">
             <p>THAT`S WHAT THE OAK ADVANTAGE IS ABOUT.</p>
