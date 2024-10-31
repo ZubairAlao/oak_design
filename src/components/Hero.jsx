@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <section id='home' className='pt-[9.5rem] lg:pt-[14.5rem] min-h-[452px] md:min-h-[556px]  lg:min-h-[780px]  relative'>
+    <section className='pt-[9.5rem] lg:pt-[14.5rem] min-h-[452px] md:min-h-[556px]  lg:min-h-[780px]  relative'>
       <div 
         className="absolute z-10 top-0 
           w-full min-h-[442px] md:min-h-[556px] lg:min-h-[780px] 
@@ -57,8 +57,8 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* <div className='absolute bottom-0 h-[177px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-20 w-full'>
-      </div> */}
+        <div className='absolute -bottom-4  h-[57px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-30 w-full'>
+      </div>
     </section>
   )
 }

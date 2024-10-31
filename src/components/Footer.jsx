@@ -5,7 +5,7 @@ import TwitterIcon from "@/assets/images/twitter.svg"
 import LinkedInIcon from "@/assets/images/linkedin.svg"
 import InstagramIcon from "@/assets/images/instagram.svg"
 import { Link } from 'react-scroll'
-import LargeHeroGrid from "@/assets/images/large-hero-grid.svg"
+import FooterGrid from "@/assets/images/footer-grid.png"
 import { goldenContactInfo } from '../constants'
 import HeroBg from "@/assets/images/hero-bg.png"
 
@@ -13,16 +13,18 @@ import HeroBg from "@/assets/images/hero-bg.png"
 const Footer = () => {
 
   return (
-    <footer className='relative bg-[#2F2F2F] pb-16 pt-48'>
+    <footer className='relative  pb-16 pt-48'>
         <div className="">
           <div 
-            className="absolute rotate-180 z-10 top-0 min-h-[520px] bg-cover bg-center w-full"
+            className="absolute z-10 -top-32 h-full bg-cover bg-center w-full"
             style={{ 
-              backgroundImage: `url(${HeroBg})`, 
+              backgroundImage: `url(${FooterGrid})`, 
               backgroundPosition: 'center', 
-              backgroundSize: '100% 100%', 
+              backgroundSize: 'contain', 
               backgroundRepeat: 'no-repeat' }}
           >
+          </div>
+          <div className='absolute -top-12  h-[57px] bg-gradient-to-b from-[#2A2A2A4F] to-[#0C0C0D] z-30 w-full'>
           </div>
 
           <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20 '>
@@ -180,10 +182,18 @@ const Footer = () => {
               </div>
             </div>
             <div className='hidden items-center gap-5 justify-center md:flex lg:hidden'>
-                <img src={InstagramIcon} alt="Instagram Icon" className='w-5 h-fit social-icon cursor-pointer'/>
-                <img src={TwitterIcon} alt="Twitter icon" className='w-5 h-fit social-icon cursor-pointer'/>
-                <img src={LinkedInIcon} alt="LinkedIn Icon" className='w-5 h-fit social-icon cursor-pointer'/>
-                <img src={FacebookIcon} alt="Facebook Icon" className='w-5 h-fit social-icon cursor-pointer'/>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <img src={InstagramIcon} alt="Instagram icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                  <img src={TwitterIcon} alt="Twitter icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <img src={LinkedInIcon} alt="LinkedIn icon" className="social-icon cursor-pointer" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <img src={FacebookIcon} alt="Facebook icon" className="social-icon cursor-pointer" />
+                </a>
               </div>
           </div>
         </div>

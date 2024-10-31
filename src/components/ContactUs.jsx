@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const ContactUs = () => {
   return (
-    <section className='pb-[93px]'>
+    <section className='pb-[93px] overflow-hidden'>
         <motion.div 
             className='container lg:flex items-center lg:items-start gap-12'
             initial={{ opacity: 0, y: 50 }}

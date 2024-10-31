@@ -8,7 +8,7 @@ import { Element } from 'react-scroll';
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <Element name="home">
         <Hero />
       </Element>
