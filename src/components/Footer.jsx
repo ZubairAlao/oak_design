@@ -13,7 +13,7 @@ import HeroBg from "@/assets/images/hero-bg.png"
 const Footer = () => {
 
   return (
-    <footer className='relative pb-16 pt-20'>
+    <footer className='relative pb-16 pt-48'>
         <div className="">
           <div 
             className="absolute z-10 -top-32 h-[400px] bg-cover bg-center w-full"
