@@ -39,27 +39,27 @@ const ContactUs = () => {
                     <form action="" className='space-y-4 text-[10px] contact-form'>
                         <div>
                             <label htmlFor="fullName">FULL NAME</label>
-                            <input type="text" id="fullName" className="contact-input" placeholder="John Doe" />
+                            <input type="text" id="fullName" className="contact-input" placeholder="John Doe"  autocomplete="name" />
                         </div>
 
                         <div>
                             <label htmlFor="email">EMAIL ADDRESS</label>
-                            <input type="email" id="email" className="contact-input" placeholder="Johndoe@email.com" />
+                            <input type="email" id="email" className="contact-input" placeholder="Johndoe@email.com" autoComplete="email" />
                         </div>
 
                         <div>
                             <label htmlFor="phone">PHONE NUMBER</label>
-                            <input type="tel" id="phone" className="contact-input" placeholder="08012344321" />
+                            <input type="tel" id="phone" className="contact-input" placeholder="08012344321" autoComplete="tel" />
                         </div>
 
                         <div>
                             <label htmlFor="referral">HOW DID YOU HEAR ABOUT US</label>
-                            <input type="text" id="referral" className="contact-input" placeholder="Referral Source" />
+                            <input type="text" id="referral" className="contact-input" placeholder="Referral Source" autocomplete="off"  />
                         </div>
 
                         <div>
                             <label htmlFor="message">MESSAGE</label>
-                            <textarea id="message" className="contact-input min-h-[120px] lg:min-h-[200px]" placeholder="Type in your message" /> 
+                            <textarea id="message" className="contact-input min-h-[120px] lg:min-h-[200px]" placeholder="Type in your message" autocomplete="off" /> 
                         </div>
 
                         <Button text="Send Message" />
