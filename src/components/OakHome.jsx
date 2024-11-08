@@ -3,7 +3,7 @@ import { aboutPicFirstRow, aboutPicSecondRow } from '../constants';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import headerLine from "@/assets/images/header-line.svg";
-import HomeOakGrid from "@/assets/images/homeoak-grid.png";
+import HomeOakGrid from "@/assets/images/homeoak-grid.svg";
 import { motion } from 'framer-motion';
 
 const AboutUs = () => {
@@ -61,10 +61,10 @@ const AboutUs = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className='flex items-center flex-col'>
-                        <h3 className='text-base cormorant-garamond font-bold'>
+                        <h1 className='text-base cormorant-garamond font-bold'>
                             What we do
                             <span className='text-3xl block text-[#C5A675]'>THE OAK HOME</span>
-                        </h3>
+                        </h1>
                         <img src={headerLine} alt="line" className='block' />
                     </div>
                     <p className='font-sizes md:w-[75%] md:max-w-[623px] lg:w-[68%] lg:max-w-[987px] mx-auto'>
@@ -92,9 +92,9 @@ const AboutUs = () => {
                         {aboutPicFirstRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
                                 <picture>
-                                    <source srcSet={`${imgPic}`} type="image/webp" />
+                                    <source srcSet={`${imgPic.optimizedImage}`} type="image/webp" />
                                     <motion.img 
-                                        src={`${imgPic}`} 
+                                        src={`${imgPic.image}`} 
                                         alt={`Image ${index}`} 
                                         className='w-full h-[200px] object-cover' 
                                         initial={{ scale: 0.9 }}
@@ -111,9 +111,9 @@ const AboutUs = () => {
                         {aboutPicSecondRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
                                 <picture>
-                                    <source srcSet={`${imgPic}`} type="image/webp" />
+                                    <source srcSet={`${imgPic.optimizedImage}`} type="image/webp" />
                                     <motion.img 
-                                        src={`${imgPic}`} 
+                                        src={`${imgPic.image}`} 
                                         alt={`Image ${index}`} 
                                         className='w-full h-[200px] object-cover' 
                                         initial={{ scale: 0.9 }}

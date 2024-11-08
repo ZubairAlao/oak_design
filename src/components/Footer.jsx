@@ -169,7 +169,7 @@ const Footer = () => {
 
 
               <div className='flex items-center justify-center md:items-start flex-col gap-6'>
-                <h3 className='font-semibold md:text-xl'>CONTACT US</h3>
+                <h3 className='font-semibold md:text-xl flex-1'>CONTACT US</h3>
                 <div className='space-y-6'>
                   {goldenContactInfo.map((info) => (
                       <div key={info.label} className='flex items-center justify-center flex-col md:flex-row md:justify-start gap-2'>

@@ -16,10 +16,10 @@ const Welcome = () => {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <h3 className="text-base cormorant-garamond font-bold">
+            <h1 className="text-base cormorant-garamond font-bold">
               Welcome to 
               <span className="text-3xl block text-[#C5A675]">THE OAKS HOLDINGS</span>
-            </h3>
+            </h1>
             <img src={headerLine} alt="line" />
           </div>
           <div className="space-y-5 lg:space-y-12 block">

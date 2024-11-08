@@ -2,11 +2,19 @@ import HousePic from "@/assets/images/about-us-first-row/house.jpg"
 import FamilyPic from "@/assets/images/about-us-first-row/family.jpg"
 import ApplicationPic from "@/assets/images/about-us-first-row/application.jpg"
 import officePic from "@/assets/images/about-us-first-row/office.jpg"
+import HousePicOptimized from "@/assets/images/about-us-first-row/house-optimized.webp"
+import FamilyPicOptimized from "@/assets/images/about-us-first-row/family-optimized.webp"
+import ApplicationPicOptimized from "@/assets/images/about-us-first-row/application-optimized.webp"
+import officePicOptimized from "@/assets/images/about-us-first-row/office-optimized.webp"
 
 import HomePic from "@/assets/images/about-us-second-row/home.jpg"
 import HomeLawnPic from "@/assets/images/about-us-second-row/home-lawn.jpg"
 import SkyScrappersPic from "@/assets/images/about-us-second-row/sky-scrappers.jpg"
 import Trainpic from "@/assets/images/about-us-second-row/train.jpg"
+import HomePicOptimized from "@/assets/images/about-us-second-row/home-optimized.webp"
+import HomeLawnPicOptimized from "@/assets/images/about-us-second-row/home-lawn-optimized.webp"
+import SkyScrappersPicOptimized from "@/assets/images/about-us-second-row/sky-scrappers-optimized.webp"
+import TrainpicOptimized from "@/assets/images/about-us-second-row/train-optimized.webp"
 
 import SmartWatchSVG from "@/assets/images/capital-list/smartwatch.svg"
 import FinanceMarketingSVG from "@/assets/images/capital-list/finance-marketing.svg"
@@ -37,8 +45,18 @@ export const navHeaders = [
     }
 ]
 
-export const aboutPicFirstRow = [HousePic, FamilyPic, officePic, ApplicationPic]
-export const aboutPicSecondRow = [SkyScrappersPic, HomePic, HomeLawnPic, Trainpic]
+export const aboutPicFirstRow = [
+    {image: HousePic, optimizedImage: HousePicOptimized},
+    {image: FamilyPic, optimizedImage: FamilyPicOptimized}, 
+    {image: officePic, optimizedImage: officePicOptimized},
+    {image: ApplicationPic, optimizedImage: ApplicationPicOptimized},
+]
+export const aboutPicSecondRow = [
+    {image: SkyScrappersPic, optimizedImage: SkyScrappersPicOptimized},
+    {image: HomePic, optimizedImage: HomePicOptimized},
+    {image: HomeLawnPic, optimizedImage: HomeLawnPicOptimized},
+    {image: Trainpic, optimizedImage: TrainpicOptimized},
+]
 
 export const OakCapitalList = [
     {

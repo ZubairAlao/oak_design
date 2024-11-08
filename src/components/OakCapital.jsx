@@ -19,9 +19,9 @@ const OakCapital = () => {
           <div className='space-y-6 md:w-[42%] lg:w-full lg:flex justify-between lg:flex-row-reverse'>
             <div className='lg:flex flex-col lg:w-[70%] lg:max-w-[763px] lg:ml-8'>
               <div className=''>
-                <h3 className='text-[32px] text-[#C5A675] cormorant-garamond font-bold'>
+                <h1 className='text-[32px] text-[#C5A675] cormorant-garamond font-bold'>
                   THE OAK CAPITAL
-                </h3>
+                </h1>
                 <img src={HeaderLine} alt="line" className='' />
               </div>
               <p className='hidden lg:block mt-8 font-sizes'>
