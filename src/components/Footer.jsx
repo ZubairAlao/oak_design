@@ -195,7 +195,7 @@ const Footer = () => {
               </div>
           </div>
         </div>
-        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container font-sizes text-center z-20 relative'>© The Oak Holdings {currentYear}. All Rights Reserved</p>
+        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container font-sizes text-center z-20 relative'>&copy; The Oak Holdings {currentYear}. All Rights Reserved</p>
     </footer>
   )
 }
