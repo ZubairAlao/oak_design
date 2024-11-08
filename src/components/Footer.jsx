@@ -168,7 +168,7 @@ const Footer = () => {
               </div>
 
 
-              <div className='flex items-center justify-center md:items-start flex-col gap-6 flex-nowrap'>
+              <div className='flex items-center justify-center md:items-start flex-col gap-6  max-w-[90%] mx-auto'>
                 <h3 className='font-semibold md:text-xl flex-1'>CONTACT US</h3>
                 <div className='space-y-6'>
                   {goldenContactInfo.map((info) => (
