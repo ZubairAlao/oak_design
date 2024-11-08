@@ -10,7 +10,7 @@ import { goldenContactInfo } from '../constants'
 
 
 const Footer = () => {
-
+  const currentYear = new Date().getFullYear();
   return (
     <footer className='relative pb-16 pt-48'>
         <div className="">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col justify-center items-center w-full container md:gap-24 relative z-20'>
-            <div className='max-w-[1236px] w-[90%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
+            <div className='max-w-[1236px] w-[95%] space-y-10 md:space-y-0 flex items-center justify-center flex-col md:flex-row md:justify-between md:items-start md:gap-4'>
               <div className='space-y-4'>
                 <Link
                   to="home"
@@ -147,7 +147,6 @@ const Footer = () => {
 
               </div>
               <div className='hidden md:flex gap-6 flex-col text-base font-semibold'>
-                
                 <Link
                   to="oakHome"
                   smooth={true}
@@ -168,7 +167,7 @@ const Footer = () => {
               </div>
 
 
-              <div className='flex items-center justify-center md:items-start flex-col gap-6  max-w-[90%] mx-auto'>
+              <div className='flex items-center justify-center md:items-start flex-col gap-6'>
                 <h3 className='font-semibold flex-1 text-base'>CONTACT US</h3>
                 <div className='space-y-6'>
                   {goldenContactInfo.map((info) => (
@@ -196,7 +195,7 @@ const Footer = () => {
               </div>
           </div>
         </div>
-        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container font-sizes text-center z-20 relative'>© The Oak Holdings 2024. All Rights Reserved</p>
+        <p className='border-t-[0.5px] border-[#9F8449] py-3 mt-12 container font-sizes text-center z-20 relative'>© The Oak Holdings {currentYear}. All Rights Reserved</p>
     </footer>
   )
 }
