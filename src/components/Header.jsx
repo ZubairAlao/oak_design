@@ -60,7 +60,7 @@ const Header = () => {
 
     return (
         <header className='flex justify-center items-center'>
-            <div className="fixed top-0 z-50 w-full bg-[#333333] md:px-8 lg:px-0">
+            <div className="fixed top-0 z-50 w-full bg-[#333333] md:px-8 lg:px-0" ref={menuRef}>
                 <div className="h-[89px] md:h-[58px] lg:h-[94px] bg-[#4B4B4B] md:mt-[1.8rem] flex justify-between items-center px-4 md:px-8 container">
                     <Link 
                         to="home"
@@ -68,7 +68,7 @@ const Header = () => {
                         duration={500}
                         className='cursor-pointer relative z-30'
                         aria-label="Home">
-                        <img src={HeaderLogo} alt="Website Logo" className="w-[66px] md:w-[50px] lg:w-[82px] h-fit" />
+                        <img src={HeaderLogo} alt="Website Logo" className="w-[66px] md:w-[50px] lg:w-[82px] h-fit" onClick={closeMenu} />
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -121,7 +121,6 @@ const Header = () => {
             {/* Mobile Navigation */}
             <nav
                 aria-label="Mobile Navigation"
-                ref={menuRef}
                 className={`md:hidden fixed top-[89px] right-0 left-0 transition-all duration-500 ease-in-out transform ${
                     toggle ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
                 } bg-[#0C0C0D] text-center w-full koho-regular py-11 z-30`}
