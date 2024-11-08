@@ -17,10 +17,10 @@ const ContactUs = () => {
         >
             <div className='lg:space-y-12 space-y-8'>
                 <div className=''>
-                    <h3 className='text-base cormorant-garamond font-bold'>
+                    <h1 className='text-base cormorant-garamond font-bold'>
                         Office 
                         <span className='text-2xl block text-[#C5A675]'>CONTACT INFORMATION</span>
-                    </h3>
+                    </h1>
                     <img src={HeaderLine} alt="line" />
                 </div>
 
