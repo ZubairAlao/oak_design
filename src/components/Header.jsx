@@ -140,7 +140,7 @@ const Header = () => {
                                 spy={true}
                                 offset={-104}
                                 activeClass="active"
-                                onClick={handleToggleButton}
+                                onClick={closeMenu}
                             >
                                 {link.label}
                             </Link>
@@ -159,7 +159,7 @@ const Header = () => {
                         smooth={true}
                         duration={500}
                         offset={-104}
-                        onClick={handleToggleButton}
+                        onClick={closeMenu}
                     >
                         CONTACT US
                     </Link>
