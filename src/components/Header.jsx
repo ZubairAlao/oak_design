@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import HeaderLogo from "@/assets/images/header-logo.png";
 import Menubar from "@/assets/images/menubar.svg";
 import CancelClose from "@/assets/images/close.svg";
@@ -9,8 +9,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-
-
+    const menuRef = useRef(null);
 
     const handleToggleButton = () => {
         setToggle(!toggle);
@@ -38,6 +37,26 @@ const Header = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [toggle]);
+
+    const closeMenu = () => {
+        setToggle(false);
+      };
+    
+      useEffect(() => {
+        const handleClickOutside = (event) => {
+          if (menuRef.current && !menuRef.current.contains(event.target)) {
+            closeMenu();
+          }
+        };
+    
+        // Add event listener to detect outside clicks
+        document.addEventListener('mousedown', handleClickOutside);
+        
+        // Clean up the event listener on component unmount
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, []);
 
     return (
         <header className='flex justify-center items-center'>
@@ -102,6 +121,7 @@ const Header = () => {
             {/* Mobile Navigation */}
             <nav
                 aria-label="Mobile Navigation"
+                ref={menuRef}
                 className={`md:hidden fixed top-[89px] right-0 left-0 transition-all duration-500 ease-in-out transform ${
                     toggle ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
                 } bg-[#0C0C0D] text-center w-full koho-regular py-11 z-30`}
