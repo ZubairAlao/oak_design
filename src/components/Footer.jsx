@@ -67,7 +67,7 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className='flex md:hidden gap-5 justify-center flex-wrap md:flex-nowrap md:flex-col font-semibold'>
+            <div className='flex md:hidden gap-5 justify-center flex-wrap md:flex-nowrap md:flex-col font-semibold'>
               <Link to="home"
                   smooth={true}
                   duration={500}
@@ -168,7 +168,7 @@ const Footer = () => {
               </div>
 
 
-              <div className='flex items-center justify-center md:items-start flex-col gap-6'>
+              <div className='flex items-center justify-center md:items-start flex-col gap-6 flex-nowrap'>
                 <h3 className='font-semibold md:text-xl flex-1'>CONTACT US</h3>
                 <div className='space-y-6'>
                   {goldenContactInfo.map((info) => (
