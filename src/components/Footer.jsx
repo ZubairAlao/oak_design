@@ -7,7 +7,6 @@ import InstagramIcon from "@/assets/images/instagram.svg"
 import { Link } from 'react-scroll'
 import FooterGrid from "@/assets/images/footer-grid.png"
 import { goldenContactInfo } from '../constants'
-import HeroBg from "@/assets/images/hero-bg.png"
 
 
 const Footer = () => {

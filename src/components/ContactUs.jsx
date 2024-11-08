@@ -39,7 +39,7 @@ const ContactUs = () => {
                     <form action="" className='space-y-4 text-[10px] contact-form'>
                         <div>
                             <label htmlFor="fullName">FULL NAME</label>
-                            <input type="text" id="fullName" className="contact-input" placeholder="John Doe"  autocomplete="name" />
+                            <input type="text" id="fullName" className="contact-input" placeholder="John Doe"  autoComplete="name" />
                         </div>
 
                         <div>
@@ -54,12 +54,12 @@ const ContactUs = () => {
 
                         <div>
                             <label htmlFor="referral">HOW DID YOU HEAR ABOUT US</label>
-                            <input type="text" id="referral" className="contact-input" placeholder="Referral Source" autocomplete="off"  />
+                            <input type="text" id="referral" className="contact-input" placeholder="Referral Source" autoComplete="off"  />
                         </div>
 
                         <div>
                             <label htmlFor="message">MESSAGE</label>
-                            <textarea id="message" className="contact-input min-h-[120px] lg:min-h-[200px]" placeholder="Type in your message" autocomplete="off" /> 
+                            <textarea id="message" className="contact-input min-h-[120px] lg:min-h-[200px]" placeholder="Type in your message" autoComplete="off" /> 
                         </div>
 
                         <Button text="Send Message" />
