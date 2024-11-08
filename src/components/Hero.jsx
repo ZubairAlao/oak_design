@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import HeroBg from "@/assets/images/hero-bg.png"
+import HeroBg from "@/assets/images/hero-bg.jpg"
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
@@ -9,12 +9,12 @@ const Hero = () => {
     <section className='pt-[9.5rem] lg:pt-[14.5rem] min-h-[452px] md:min-h-[556px]  lg:min-h-[780px]  relative'>
       <div 
         className="absolute z-10 top-0 
-          w-full min-h-[442px] md:min-h-[556px] lg:min-h-[780px] 
+          w-full min-h-[442px] md:min-h-[556px] lg:min-h-[780px]
           bg-cover bg-center"
-        style={{ backgroundImage: `url(${HeroBg})`,
-          backgroundPosition: 'top center', 
-          backgroundSize: '100% 100%', 
-          backgroundRepeat: 'no-repeat' }}
+          style={{ backgroundImage: `url(${HeroBg})`,
+            backgroundPosition: 'top center', 
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat' }}
       ></div>
 
         <div className='space-y-6 md:space-y-9 text-center container relative z-20 w-[100%] max-w-[25rem] md:max-w-[38rem] lg:max-w-[970px]'>

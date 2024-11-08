@@ -28,6 +28,7 @@ const Welcome = () => {
             </p>
             <motion.img 
               src={WelcomeImg1} 
+              loading="lazy"
               alt="welcome image" 
               className="w-full transition-all duration-300 hover:border-2 border-[#AF885A]"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -46,6 +47,7 @@ const Welcome = () => {
           <img 
             src={WelcomeImg2} 
             alt="welcome image 2" 
+            loading="lazy"
             className="w-full lg:min-h-[467px] md:min-h-[367px] object-cover transition-all duration-300 hover:border-2 border-[#AF885A]"
           />
           <div className="font-semibold font-sizes md:space-y-0.5 mt-4">

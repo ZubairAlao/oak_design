@@ -91,15 +91,18 @@ const AboutUs = () => {
                     <Splide className='flex items-center justify-center md:mr-8 lg:mr-0 relative z-20' options={options}>
                         {aboutPicFirstRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
-                                <motion.img 
-                                    src={imgPic} 
-                                    alt={`Image ${index}`} 
-                                    className='w-full h-[200px] object-cover' 
-                                    initial={{ scale: 0.9 }}
-                                    whileHover={{ scale: 1 }}
-                                    transition={{ duration: 0.5 }}
-                                    loading="lazy"
-                                />
+                                <picture>
+                                    <source srcSet={`${imgPic}`} type="image/webp" />
+                                    <motion.img 
+                                        src={`${imgPic}`} 
+                                        alt={`Image ${index}`} 
+                                        className='w-full h-[200px] object-cover' 
+                                        initial={{ scale: 0.9 }}
+                                        whileHover={{ scale: 1 }}
+                                        transition={{ duration: 0.5 }}
+                                        loading="lazy"
+                                    />
+                                </picture>
                             </SplideSlide>
                         ))}
                     </Splide>
@@ -107,15 +110,18 @@ const AboutUs = () => {
                     <Splide className='flex items-center justify-center md:ml-8 lg:ml-0 relative z-20' options={optionsTwo}>
                         {aboutPicSecondRow.map((imgPic, index) => (
                             <SplideSlide key={index}>
-                                <motion.img 
-                                    src={imgPic} 
-                                    alt={`Image ${index}`} 
-                                    className='w-full h-[200px] object-cover' 
-                                    initial={{ scale: 0.9 }}
-                                    whileHover={{ scale: 1 }}
-                                    transition={{ duration: 0.5 }}
-                                    loading="lazy"
-                                />
+                                <picture>
+                                    <source srcSet={`${imgPic}`} type="image/webp" />
+                                    <motion.img 
+                                        src={`${imgPic}`} 
+                                        alt={`Image ${index}`} 
+                                        className='w-full h-[200px] object-cover' 
+                                        initial={{ scale: 0.9 }}
+                                        whileHover={{ scale: 1 }}
+                                        transition={{ duration: 0.5 }}
+                                        loading="lazy"
+                                    />
+                                </picture>
                             </SplideSlide>
                         ))}
                     </Splide>

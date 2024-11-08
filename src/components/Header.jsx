@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import HeaderLogo from "@/assets/images/header-logo.png";
+import HeaderLogo from "@/assets/images/aok-logo.svg";
 import Menubar from "@/assets/images/menubar.svg";
 import CancelClose from "@/assets/images/close.svg";
 import { Link } from 'react-scroll';

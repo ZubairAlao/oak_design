@@ -1,11 +1,11 @@
 import React from 'react'
-import FooterLogo from "@/assets/images/footer-logo.png"
+import FooterLogo from "@/assets/images/aok-logo.svg"
 import FacebookIcon from "@/assets/images/facebook.svg"
 import TwitterIcon from "@/assets/images/twitter.svg"
 import LinkedInIcon from "@/assets/images/linkedin.svg"
 import InstagramIcon from "@/assets/images/instagram.svg"
 import { Link } from 'react-scroll'
-import FooterGrid from "@/assets/images/footer-grid.png"
+import FooterGrid from "@/assets/images/footer-grid.svg"
 import { goldenContactInfo } from '../constants'
 
 
