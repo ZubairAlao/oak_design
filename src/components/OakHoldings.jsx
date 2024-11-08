@@ -6,7 +6,7 @@ import headerLine from "@/assets/images/header-line.svg";
 
 const Welcome = () => {
   return (
-    <section className="pb-28 mt-12 relative z-20 overflow-hidden">
+    <section className="pb-28 pt-16 relative z-20 overflow-hidden">
       <div className="container space-y-5 md:flex justify-center items-start md:gap-9 lg:gap-16">
         
         <motion.div

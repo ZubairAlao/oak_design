@@ -16,7 +16,7 @@ const Hero = () => {
           backgroundSize: '100% 100%', 
           backgroundRepeat: 'no-repeat' }}
       ></div>
-      
+
         <div className='space-y-6 md:space-y-9 text-center container relative z-20 w-[100%] max-w-[25rem] md:max-w-[38rem] lg:max-w-[970px]'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -51,6 +51,7 @@ const Hero = () => {
               to="oakHolding"
               smooth={true}
               duration={500}
+              offset={-104}
             > 
               <Button text="GET MORE INFO" />
             </Link>

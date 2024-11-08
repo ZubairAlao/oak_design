@@ -155,8 +155,8 @@ a.active::after {
 
 .contact-input:focus {
   outline: none;
-  border-color: #3b82f6; /* blue-500 */
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* blue ring effect */
+  border-color: #ECF0FC80; /* blue-500 */
+  box-shadow: 0 0 0 2px rgba(173, 174, 176, 0.5); 
 }
 
 .contact-form label {
